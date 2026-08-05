@@ -1,12 +1,20 @@
 ### IntelliJ IDEA ###
 .idea/
 *.iml
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
 ### Kotlin ###
 .kotlin
+
+### Gradle ###
+.gradle/
+
+### Build output ###
+out/
+build/
+
+### Compiled files ###
+*.class
+*.jar
 
 ### Eclipse ###
 .apt_generated
@@ -30,5 +38,6 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### OS files ###
 .DS_Store
+Thumbs.db
