@@ -1,3 +1,4 @@
 fun main(){
-    println("hello, i am bubordz");
+    val name="skusta klee";
+    println(name);
 }
