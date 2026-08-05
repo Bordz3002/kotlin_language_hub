@@ -1,0 +1,17 @@
+# IntelliJ IDEA
+.idea/
+
+# Gradle
+.gradle/
+
+# Build output
+build/
+out/
+
+# Compiled files
+*.class
+*.jar
+
+# OS files
+Thumbs.db
+.DS_Store
