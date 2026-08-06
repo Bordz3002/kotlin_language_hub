@@ -1,4 +1,3 @@
-fun main(){
-    val name="skusta klee";
-    println(name);
+fun main(args:Array<String>){
+    println("this is a test");
 }
