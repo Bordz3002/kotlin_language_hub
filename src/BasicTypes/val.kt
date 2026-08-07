@@ -9,5 +9,6 @@ fun main(args:Array<String>){
     println("my name is $fullName");
     println(lastName.compareTo(fullName));
     println(surname.lowercase().compareTo(lastName));
+    println("index of 'naval' in fullName is: ${fullName.lowercase().indexOf(string="naval")}");
 //    firstName="asdjkl;f";
 }
