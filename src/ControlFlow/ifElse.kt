@@ -8,6 +8,8 @@ fun main(args:Array<String>){
     }else{
         println("$num2 is greater than $num1");
     }
+    /*one liner example. Kotlin does not have ternary operation*/
+    println(if(num1>num2)num1 else num2);
     /*@example2*/
     val time:Byte=20;
     val greeting:String=if(time<18){"good day"}else{"good evening"};
