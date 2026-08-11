@@ -10,7 +10,7 @@ fun registerUser(username:String, email:String):String{
     }
     registeredUsernames.add(username)
     registeredEmails.add(email)
-    return "User registered successfully: ${username}"
+    return "User registered successfully: $username"
 }
 fun main(args:Array<String>){
     println(registerUser("coco_crunch", "crunch@example.com"))
