@@ -5,5 +5,6 @@ fun main(){
         add("nissan")
         add("honda")
         println("list size: $size")
+
     }
 }

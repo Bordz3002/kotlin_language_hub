@@ -1,3 +1,4 @@
+/*with(subject){"im working with subject here} */
 class Music{
     var genre:String=""
     var songName:String=""
