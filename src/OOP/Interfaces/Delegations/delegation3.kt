@@ -1,5 +1,3 @@
-import java.io.File
-
 interface Logger{
     fun log(expectMessage:String)
 }

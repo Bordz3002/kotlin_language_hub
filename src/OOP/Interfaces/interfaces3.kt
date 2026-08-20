@@ -1,5 +1,3 @@
-import javax.print.Doc
-
 interface Printable{
     fun print()
 }
