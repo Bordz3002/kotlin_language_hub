@@ -49,4 +49,38 @@ fun loginUser(email:Email, password:Password):AuthState{
     println("attempting login....")
     println("email: ${email.mask()}")
     println("password strength: ${password.strength()}")
+    return when{
+        email.value=="test@email.com"&&password.value=="Secret123"->{
+            AuthState.LoggedIn(email, "john doe")
+        }
+        email.value=="test@email.com"->{
+            AuthState.Error("invalid password")
+        }
+        else->AuthState.Error("user not found")
+    }
+}
+fun handleAuthState(state:AuthState){
+    println("\n"+"=".repeat(20))
+    when(state){
+        AuthState.Loading->{
+            println("loading...please wait")
+        }
+        AuthState.LoggedOut->{
+            println("you are logged out")
+            println("please log in to continue")
+        }
+        is AuthState.LoggedIn->{
+            println("Welcom, ${state.displayName}")
+        }
+        is AuthState.Error->{
+            println(state.messages)
+            println("please try again")
+        }
+    }
+    println("=".repeat(20))
+}
+fun main(){
+    println("---authentication system---")
+    val email1=Email("test@email.com")
+    val password1=Password("Secret123")
 }

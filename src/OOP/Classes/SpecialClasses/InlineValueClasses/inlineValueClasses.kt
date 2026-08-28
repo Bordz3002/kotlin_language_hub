@@ -1,8 +1,8 @@
 @JvmInline
-value class Email(val value:String)
-fun sendEmail(email:Email){
+value class Emails(val value:String)
+fun sendEmail(email:Emails){
     println("sending email to:${email.value}")
 }
 fun main(){
-    sendEmail(Email("tororo@example.com"))
+    sendEmail(Emails("tororo@example.com"))
 }
