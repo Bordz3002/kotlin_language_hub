@@ -1,5 +1,6 @@
-//using 'as?' with default values
-fun getStringLength(expectedVariable:Any){
-    val str=expectedVariable as? String
-    return str?.length ?:0
+//using 'as' (when you're sure)
+fun main(){
+    val numbers:Any=listOf(1,2,3)
+    val list=numbers as List<*>
+    println(list.size)
 }
