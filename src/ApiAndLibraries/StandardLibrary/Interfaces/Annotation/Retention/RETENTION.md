@@ -7,4 +7,4 @@
 `POLICY -------------DESCRIPTION--------------WHEN TO USE`  
 - `SOURCE` - Annotation is only in the source code: removed during compilation - for compile-time checks only
 - `BINARY` - Annotation is in the compiled class file: not available at runtime - for tools that analyze bytecodes
-- 
+- `RUNTIME` - Annotation is availble in runtime via reflection - When you need to read annotations while the program runs
