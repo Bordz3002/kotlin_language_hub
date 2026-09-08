@@ -3,9 +3,9 @@ import kotlin.annotation.AnnotationRetention
 import kotlin.annotation.Retention
 
 @Retention(AnnotationRetention.BINARY)
-annotation class ApiVersion(val version:String)
+annotation class ThisApiVersion(val version:String)
 
-@ApiVersion("2.0")
+@ThisApiVersion("2.0")
 class UserApi(){
     fun getUser(){}
 }
