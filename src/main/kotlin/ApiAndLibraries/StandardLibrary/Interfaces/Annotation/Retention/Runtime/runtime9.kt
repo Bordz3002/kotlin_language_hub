@@ -3,7 +3,7 @@
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.CLASS)
 annotation class CanLog
 @CanLog
-class WeatherStation{
+class WeatherCamp{
     fun readTemperature(){
         println("temperature: 30C")
     }
