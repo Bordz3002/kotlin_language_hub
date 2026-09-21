@@ -20,4 +20,32 @@ This can cause problems:
 ## Where can you use it
 | location | example |
 | -------- | ------- |
-| top-level property | `@Volatile`
+| top-level property | `@Volatile var counter:Int=0` |
+|  class property | `class MyClass {@Volatile var flag:Boolean=false}` |
+| mutable only | Must be `var`, not `val` |
+
+## Key Points
+1. Only works on `var` - `val` can't change, so need
+2. only affects JVM - no effect on other platforms
+3. visibility, not atomicity - use `synchronized` for compound operations
+4. slight performance cost - because of memory synchronization
+
+## When to Use it
+Use `@Volatile` when:  
+- a variable is shared between threads
+- one thread writes, others read
+- you need all threads to see the latest value
+### Don't use it when:
+- only one thread access the variable 
+- you need atomic operations (use `synchronized` or `Atomic*` classes)
+- the variable is a `val`
+## Important Warning
+`@Volatile` does not make compound operations thread-safe
+```
+Kotlin
+
+@Volatile
+var count:Int=0
+//This is NOT thread-safe
+count++ //read, add, write - can interleave between threads!
+```
