@@ -17,8 +17,27 @@ class FileDownloader{
         println("download complete")
     }
     fun showProgress(){
-        while(!this.isComplete){
-            var bar
+        while (!isComplete) {
+            val bar = "█".repeat(progress / 10)
+            val empty = "░".repeat(10 - progress / 10)
+            print("\r[$bar$empty] $progress%")
+            Thread.sleep(100)
         }
+        println("\r[██████████] 100%")
+        println("Progress bar finished")
     }
+}
+fun main(){
+    val downloader:FileDownloader=FileDownloader()
+    val downloadThread:Thread=Thread{
+        downloader.download()
+    }
+    val progressThread:Thread=Thread{
+        downloader.showProgress()
+    }
+    progressThread.start()
+    downloadThread.start()
+    downloadThread.join()
+    progressThread.join()
+    println("main thread done")
 }
