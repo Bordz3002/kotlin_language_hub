@@ -13,6 +13,20 @@ class CaseInsensitiveMap<V>(private val mapEntries:Set<Map.Entry<String, V>>):Ab
 fun main(){
     val map =CaseInsensitiveMap(mapEntries=mapOf(
         "name" to "alice",
-        "age" to 25
+        "age" to 25,
+        "city" to "new york"
     ).entries)
+    println("original keys: [name, age, city]")
+    println("size: ${map.size}")
+    println("get \"name\": ${map["name"]}")
+    println("get \"NAME\": ${map["NAME"]}")
+    println("get \"Name\": ${map["Name"]}")
+    println("get \"age\": ${map["age"]}")
+    println("get \"city\": ${map["city"]}")
+    println("contains key \"name\": ${map.containsKey(key="name")}")
+    println("contains key \"NAME\": ${map.containsKey(key="NAME")}")
+    println("contains key \"unknown\": ${map.containsKey(key="unknown")}")
+    println("keys: ${map.keys}")
+    println("values: ${map.values}")
+    println("contents: $map")
 }
